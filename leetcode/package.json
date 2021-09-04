@@ -3,6 +3,7 @@
     "prettier": "^2.3.2"
   },
   "dependencies": {
+    "collections": "^5.1.12",
     "global": "^4.4.0",
     "ts-node": "^10.2.0",
     "tsc": "^2.0.3",

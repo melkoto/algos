@@ -1,0 +1,30 @@
+// https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
+
+/**
+ * @param {number[]} numbers
+ * @param {number} target
+ * @return {number[]}
+ */
+const twoSum = function(numbers, target) {
+    let p1 = 0, p2 = numbers.length - 1
+
+    const result = [] // так как длина массива фикси-ая space complexity = O(1)
+
+    while (p1 < p2) {
+        if (numbers[p1] + numbers[p2] > target) p2--
+        else if (numbers[p1] + numbers[p2] < target) p1++
+        else {
+            result.push(p1+1, p2+1)
+            break
+        }
+    }
+    return result
+};
+
+console.log(twoSum([2,7,11,15], 9))
+console.log(twoSum([2,3,4], 6))
+console.log(twoSum([-1, 0], -1))
+
+// Time complexity: O(n)
+// Space complexity: O(1)
+

@@ -1,7 +1,7 @@
 package main
 
-import "go/lengthOfLongestSubstring"
+import "go/uncommonFromSentences"
 
 func main() {
-	lengthOfLongestSubstring.LengthOfLongestSubstring("abcabcbb")
+	uncommonFromSentences.UncommonFromSentences("this apple is sweet", "this apple is sour")
 }

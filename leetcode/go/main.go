@@ -1,7 +1,13 @@
 package main
 
-import "go/uncommonFromSentences"
+import (
+	"fmt"
+	"go/reorderSpaces"
+)
 
 func main() {
-	uncommonFromSentences.UncommonFromSentences("this apple is sweet", "this apple is sour")
+	fmt.Println(reorderSpaces.ReorderSpaces("  this   is  a sentence "))
+	fmt.Println(reorderSpaces.ReorderSpaces("a"))
+	fmt.Println(reorderSpaces.ReorderSpaces(" a  "))
+	fmt.Println(reorderSpaces.ReorderSpaces("can    you"))
 }

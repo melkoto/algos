@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f2b4c25-cabf-490b-ac0d-bc2bb687f49f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/closestValue/closestValue.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sortedArrayToBST/sortedArrayToBST.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java/src/com/company/binaryTree/closestValue/closestValue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java/src/com/company/binaryTree/sortedArrayToBST/sortedArrayToBST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/closestValue/closestValue.go" beforeDir="false" afterPath="$PROJECT_DIR$/closestValue/closestValue.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +65,8 @@
       <updated>1638570713010</updated>
       <workItem from="1638570714092" duration="5967000" />
       <workItem from="1638631928337" duration="9985000" />
-      <workItem from="1638739731645" duration="3299000" />
+      <workItem from="1638739731645" duration="3683000" />
+      <workItem from="1638775323571" duration="2634000" />
     </task>
     <servers />
   </component>

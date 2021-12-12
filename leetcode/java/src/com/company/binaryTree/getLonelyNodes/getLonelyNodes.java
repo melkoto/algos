@@ -1,7 +1,12 @@
 package com.company.binaryTree.getLonelyNodes;
 
+import com.sun.source.tree.Tree;
+
+import java.awt.event.TextEvent;
 import java.util.ArrayList;
+import java.util.Deque;
 import java.util.List;
+import java.util.Stack;
 
 class TreeNode {
     int val;
@@ -16,24 +21,48 @@ class TreeNode {
     }
 }
 
+//class Solution {
+//    public List<Integer> getLonelyNodes(TreeNode root) {
+//        List<Integer> res = new ArrayList<>();
+//        Stack<TreeNode> s = new Stack<>();
+//        s.push(root);
+//
+//        if (root == null) return res;
+//
+//        while (!s.isEmpty()) {
+//            TreeNode curr = s.pop();
+//
+//            if (curr.left != null) {
+//                s.push(curr.left);
+//                if (curr.right == null) {
+//                    res.add(curr.left.val);
+//                }
+//            }
+//
+//            if (curr.right != null) {
+//                s.push(curr.right);
+//                if (curr.left == null) {
+//                    res.add(curr.right.val);
+//                }
+//            }
+//        }
+//        return res;
+//    }
+//}
+
 class Solution {
     private List<Integer> res = new ArrayList<>();
     public List<Integer> getLonelyNodes(TreeNode root) {
-        rec(root);
+        help(root, false);
         return res;
     }
 
-    private void rec(TreeNode node) {
-        if (node == null) return;
+    private void help(TreeNode root, boolean isAlone) {
+       if (root == null) return;
 
-        if (node.left != null && node.right == null) {
-            this.res.add(node.left.val);
-        }
-        if (node.right != null && node.left == null) {
-            this.res.add(node.right.val);
-        }
-        rec(node.left);
-        rec(node.right);
+       help(root.left, root.right == null);
+        if (isAlone) res.add(root.val);
+       help(root.right, root.left == null);
     }
 }
 

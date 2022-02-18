@@ -8,17 +8,18 @@
 const twoSum = function(numbers, target) {
     let p1 = 0, p2 = numbers.length - 1
 
-    const result = [] // так как длина массива фикси-ая space complexity = O(1)
-
     while (p1 < p2) {
-        if (numbers[p1] + numbers[p2] > target) p2--
-        else if (numbers[p1] + numbers[p2] < target) p1++
-        else {
-            result.push(p1+1, p2+1)
-            break
+        let sum = numbers[p1] + numbers[p2]
+        if (sum > target) {
+            p2--
         }
+
+        else if (sum < target) p1++
+        else {
+            return [p1+1, p2+1]
+        }
+
     }
-    return result
 };
 
 console.log(twoSum([2,7,11,15], 9))

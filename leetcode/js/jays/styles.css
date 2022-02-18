@@ -1,0 +1,10 @@
+.container {
+    margin: 0 auto;
+}
+
+.inner {
+    outline: 1px solid black;
+    width: 500px;
+    height: 500px;
+    margin-bottom: 20px;
+}

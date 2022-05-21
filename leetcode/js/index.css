@@ -1,0 +1,16 @@
+.tooltip {
+    display: none;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.tooltip.tooltip_active {
+    display: block;
+    position: absolute;
+}
+
+.left_bottom {
+    position: fixed;
+    bottom: 5px;
+    left: 0;
+}

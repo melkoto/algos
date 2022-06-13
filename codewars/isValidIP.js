@@ -1,7 +1,4 @@
 function isValidIP(str) {
-  const nums = '([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])'
-  const regex = new RegExp(`^${nums}\\.${nums}\\.${nums}\\.${nums}$`)
-  return regex.test(str)
 }
 
 console.log(isValidIP("137.255.156.100"))

@@ -1,12 +1,12 @@
 function encode(str) {
   let encodedStr = ''
-  let count = 0
+  let counter = 0
 
   for (let i = 0; i < str.length; i++) {
-    count++
-    if (i + 1 && str[i] !== str[i + 1]) {
-      encodedStr += count + str[i]
-      count = 0
+    counter++
+    if (str[i] !== str[i + 1]) {
+      encodedStr += counter + str[i]
+      counter = 0
     }
   }
   return encodedStr
@@ -14,21 +14,22 @@ function encode(str) {
 
 function decode(str) {
   let decodedStr = ''
-  let repeatStr = ''
+  let repeatedChar = ''
 
   for (let i = 0; i < str.length; i++) {
     while (isNumber(str[i])) {
-      repeatStr += str[i++]
+      repeatedChar += str[i++]
     }
-    decodedStr += str[i].repeat(+repeatStr)
-    repeatStr = ''
+    decodedStr += str[i].repeat(+repeatedChar)
+    repeatedChar = ''
   }
-  return decodedStr.length ? decodedStr : str
+  return decodedStr
 }
 
 function isNumber(char) {
   return !isNaN(char)
 }
+
 
 console.log(encode('AAA'))
 console.log(encode('AB'))

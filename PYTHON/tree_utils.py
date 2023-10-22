@@ -16,5 +16,3 @@ def list_to_tree(arr: List[Optional[int]], index: int = 0) -> Optional[TreeNode]
     node.left = list_to_tree(arr, 2 * index + 1)
     node.right = list_to_tree(arr, 2 * index + 2)
     return node
-
-# __all__ = ['list_to_tree']

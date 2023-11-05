@@ -4,9 +4,27 @@ from tree_utils import TreeNode
 
 
 class Solution:
-    # TODO solve this one in november
     def construct_maximum_binary_tree(self, nums: List[int]) -> Optional[TreeNode]:
-        pass
+        def rec(l: int, r: int, nums: List[int]):
+            if l == r:
+                return None
+
+            max_ind = max_range(l, r, nums)
+            node = TreeNode(nums[max_ind])
+            node.left = rec(l, max_ind, nums)
+            node.right = rec(max_ind + 1, r, nums)
+            return node
+
+        def max_range(l: int, r: int, nums: List[int]):
+            max_ind = l
+
+            for i in range(l, r):
+                if nums[max_ind] < nums[i]:
+                    max_ind = i
+
+            return max_ind
+
+        return rec(0, len(nums), nums)
 
 
 sol = Solution()

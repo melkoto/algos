@@ -5,4 +5,7 @@
   <component name="ProjectRootManager" version="2" languageLevel="JDK_21" project-jdk-name="Python 3.9" project-jdk-type="Python SDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
+  <component name="ProjectType">
+    <option name="id" value="jpab" />
+  </component>
 </project>
